@@ -1,37 +1,32 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Pizza House</title>
-    <link rel="stylesheet" type="text/css" href="styles.css">
-</head>
-<body>
-    <h1>Welcome to Pizza House</h1>
-    <div class="menu">
-        Pizza List
-    </div>
-   
-   
-    <!-- @for($i=0; $i<5; $i++)
-    <p>the value of is is {{$i}}</p>
-    @endfor -->
+@extends('layouts.layout')
 
-    <!-- @for($i=0; $i<count($pizzas); $i++);
-    <p>{{$pizzas[$i]['type']}}</p>
-    @endfor -->
+@section('content')
+<div class="flex-center position-ref full-height">
+    <div class="content">
+        <div class="title m-b-md">
+            Pizza List
+        </div>
+        
+        <!-- @for($i = 0; $i < 5; $i++)
+          <p>the value of i is {{ $i }}</p>
+        @endfor -->
 
-    @foreach ( $pizzas as $pizza )
-    <div>
-     {{$loop->index}}   {{$pizza['type']}} - {{$pizza['base']}}
-     @if ($loop->first)
-        <span> - first in the loop</span>
-     
-     @endif
-     
-     @if($loop->last)
-     <span>- last in the loop</span>
-     @endif
+        <!-- @for($i = 0; $i < count($pizzas); $i++)
+          <p>{{ $pizzas[$i]['type'] }}</p>
+        @endfor -->
+
+        @foreach($pizzas as $pizza)
+          <div>
+            {{ $loop->index }} - {{ $pizza['type'] }} - {{ $pizza['base'] }}
+            @if($loop->first)
+              <span> - first in the loop</span>
+            @endif
+            @if($loop->last)
+              <span> - last in the loop</span>
+            @endif
+          </div>
+        @endforeach
+
     </div>
-    
-    @endforeach
-</body>
-</html>
+</div>
+@endsection
