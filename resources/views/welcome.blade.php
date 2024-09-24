@@ -17,6 +17,7 @@
     @endif
 
     <div class="content">
+        <img src="/img/pizza_logo.jpg" alt="pizza logo" class="logo">
         <div class="title m-b-md">
             Pizza House<br />
             The North's Best Pizzas
