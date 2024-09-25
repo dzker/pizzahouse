@@ -1,32 +1,12 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\PizzaController;
 
 Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/pizzas', function () {
-    // return view('pizzas');
-    $pizza = [
-        ['type' =>'hawaiian', 'base' => 'cheesy crust'],
-        ['type' =>'volcano', 'base' => 'garlic crust'],
-        ['type' =>'veg supreme', 'base' => 'thin & crispy']
-    ];
+Route::get('/pizzas',[PizzaController::class,'index'] );
 
-
-
-    return view('pizzas', [
-        'pizzas'=> $pizza,
-        'name'=> request('name'),
-        'age'=> request('age')
-    ]);
-    // return view ('pizzas',['type'=> 'hawaiian', 'base'=>'cheesy crust']);
-
-    
-});
-
-Route::get('/pizzas/{id}', function ($id) {
-    // use the $id variable to query the db for a record
-    return view('details', ['id' => $id]);
-});
+Route::get('/pizzas/{id}', [PizzaController::class, 'show']);
