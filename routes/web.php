@@ -13,6 +13,14 @@ Route::get('/pizzas', function () {
         ['type' =>'volcano', 'base' => 'garlic crust'],
         ['type' =>'veg supreme', 'base' => 'thin & crispy']
     ];
-    return view('pizzas', ['pizzas'=> $pizza]);
+
+
+
+    return view('pizzas', [
+        'pizzas'=> $pizza,
+        'name'=> request('name'),
+        'age'=> request('age')
+    ]);
     // return view ('pizzas',['type'=> 'hawaiian', 'base'=>'cheesy crust']);
+    
 });
