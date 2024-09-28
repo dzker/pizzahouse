@@ -14,13 +14,17 @@ class PizzaController extends Controller
 // $pizza = Pizza::where('type','hawaiian')->get();
 $pizza = Pizza::latest()->get();
 
-        return view('pizzas', [
+        return view('pizzas.index', [
             'pizzas'=> $pizza
           
         ]);
     }
 
     public function show($id){
-        return view('details', ['id' => $id]);
+        return view('pizzas.show', ['id' => $id]);
+    }
+
+    public function create() {
+        return view('pizzas.create');
     }
 }
