@@ -1,8 +1,9 @@
 @extends('layouts.layout')
-
+@vite(['resources/scss/app.scss','resources/css/app.css', 'resources/js/app.js'])
 @section('content')
 <div class="wrapper create-pizza">
   <h1>Create a New Pizza</h1>
+ 
   <form action="/pizzas" method="POST">
     @csrf
     <label for="name">Your name:</label>
@@ -32,4 +33,5 @@
     <input type="submit" value="Order Pizza">
   </form>
 </div>
+
 @endsection

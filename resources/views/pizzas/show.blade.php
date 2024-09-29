@@ -18,4 +18,5 @@
   </form>
 </div>
 <a href="/pizzas" class="back"><- Back to all pizzas</a>
+@vite(['resources/scss/app.scss','resources/css/app.css', 'resources/js/app.js'])
 @endsection

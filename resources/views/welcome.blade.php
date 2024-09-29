@@ -25,6 +25,10 @@
        {{--This message will print after ordering using routes in PizzaController.php this is a comment --}}
         <p class="mssg"> {{session('mssg')}}</p> 
         <a href="/pizzas/create">Order a Pizza</a>
+
+        @vite(['resources/css/app.css', 'resources/scss/app.scss', 'resources/js/app.js', 'resources/scss/main.scss'])
     </div>
+    
 </div>
 @endsection
+
