@@ -17,8 +17,9 @@ return new class extends Migration
             $table->string('type');
             $table->string('base');
             $table->string('name');
-            //if we want to add a new column and how to migrate but not a safer options #php artisan migrate:rollback
-            // $table->integer('price');
+            $table->json('toppings');
+
+            
 
         });
     }
