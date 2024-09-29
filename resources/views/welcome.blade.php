@@ -24,7 +24,7 @@
         </div>
        {{--This message will print after ordering using routes in PizzaController.php this is a comment --}}
         <p class="mssg"> {{session('mssg')}}</p> 
-        <a href="/pizzas/create">Order' a Pizza</a>
+        <a href="/pizzas/create">Order a Pizza</a>
     </div>
 </div>
 @endsection
