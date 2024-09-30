@@ -8,11 +8,11 @@ Route::get('/', function () {
 });
 
 //The route is ordered from the most above to the most below for priority
-Route::get('/pizzas',[PizzaController::class,'index'] )->middleware('auth');
-Route::get('pizzas/create' , [PizzaController::class, 'create']);   
-Route::post('pizzas', [PizzaController::class, 'store']);  
-Route::get('/pizzas/{id}', [PizzaController::class, 'show'])->middleware('auth');
-Route::delete('/pizzas/{id}', [PizzaController::class, 'destroy'])->middleware('auth');
+Route::get('/pizzas',[PizzaController::class,'index'] )->name('pizzas.index')->middleware('auth');
+Route::get('pizzas/create' , [PizzaController::class, 'create'])->name('pizzas.create');  
+Route::post('pizzas', [PizzaController::class, 'store'])->name('pizzas.store');  
+Route::get('/pizzas/{id}', [PizzaController::class, 'show'])->name('pizzas.show')->middleware('auth');
+Route::delete('/pizzas/{id}', [PizzaController::class, 'destroy'])->name('pizzas.destroy')->middleware('auth');
 
 
 
