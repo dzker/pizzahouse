@@ -1,5 +1,7 @@
-@extends('layouts.layout')
+@extends('layouts.app')
+
 @vite(['resources/scss/app.scss','resources/css/app.css', 'resources/js/app.js'])
+
 @section('content')
 <div class="wrapper create-pizza">
   <h1>Create a New Pizza</h1>
