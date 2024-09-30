@@ -150,3 +150,8 @@ a.back {
         }
     }
 }
+
+.logo {
+    width: 450px; // Shrinks the image to 50% of its original size
+    height: auto; // Maintains the aspect ratio
+}

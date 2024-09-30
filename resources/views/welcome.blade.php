@@ -26,7 +26,7 @@
         <p class="mssg"> {{session('mssg')}}</p> 
         <a href="/pizzas/create">Order a Pizza</a>
 
-        @vite(['resources/css/app.css', 'resources/scss/app.scss', 'resources/js/app.js', 'resources/scss/main.scss'])
+        @vite(['resources/scss/app.scss','resources/css/app.css', 'resources/js/app.js'])
     </div>
     
 </div>
